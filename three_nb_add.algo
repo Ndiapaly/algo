@@ -1,0 +1,51 @@
+VAR
+   num1, num2, num3 : INTEGER;
+   sum : INTEGER :=0;
+
+BEGIN
+   
+   Read(num1)
+   Read(num2)
+   Read(num3)
+   sum := num1 + num2 + num3;
+   Write(sum)
+
+END   
+
+SWITCH (n) DO
+    CASE 1 : // code to be executed if n = 1;
+            BREAK; // BREAK is used to skip the other cases
+    CASE 2 : // code to be executed if n = 2;
+    DEFAULT :  // code to be executed if n doesn't match any cases
+END_SWITCH
+
+/* *********** Bus tickets ******* */
+
+/*
+ask how old are you
+IF you are under 16, THEN pay half ticket
+ELSE pay full ticket
+*/
+// first solution
+ticket_price := 20 ;
+IF (age <=16) THEN
+   ticket_price := 10 ;
+END_IF
+
+// Second solution
+IF (age <= 16) THEN
+   ticket_price := 10 ;
+ELSE
+   ticket_price := 20 ;
+END_IF
+
+IF (age<=10) THEN
+   ticket_price := 4 ;
+ELSE_IF (age<=16) THEN
+/*  in this case, we don't specify whether the age is not under 10
+because in this case it will satisfy the first condition
+and execute the first block of instruction */
+   ticket_price := 10 ;
+ELSE
+   ticket_price := 20 ;
+END_IF

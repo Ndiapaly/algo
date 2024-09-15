@@ -1,0 +1,42 @@
+length := 0;
+numberwords = 0;
+numbervowels = 0;
+vowels = 'aeiouAEIOU';
+wordsincourt = false;
+
+FOR(char of phrase){
+  IF (char = "."){
+    break
+  }
+  END_IF
+  length++;
+  if (vowels.includes(char)){
+    numbervowels++;
+  }
+  END_IF
+  if (char === ' ') {
+            if (motEnCours) {
+                nombreMots++;
+                motEnCours = false;
+            }
+        else {
+            motEnCours = true;
+        }
+  END_IF
+    }
+  END_IF  
+
+    if (motEnCours) {
+        nombreMots++;
+    }
+  END_IF
+
+    return {
+        longueur: longueur,
+        nombreMots: nombreMots,
+        nombreVoyelles: nombreVoyelles
+    };
+}
+END_FOR
+
+END
